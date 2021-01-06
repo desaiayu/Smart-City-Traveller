@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Things To Do</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+<style>
+  
+.copyright
+{
+border:2px solid black;
+background-color:grey;
+color:white;
+}  
+
+h1{
+color:white;
+}
+
+.bg{
+	background-image:url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+button
+{
+position:fixed;
+top:10px;
+margin-left:525px;
+left:700px;
+}
+
+input
+{
+position:fixed;
+top:17px;
+margin-left:275px;
+left:700px;
+}
+
+.dropbtn1 {
+    height:35px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+top:10px;
+margin-left:275px;
+left:1000px;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #3e8e41;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    top:-20px;
+    left:1000px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 260px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    top: 0px;	
+    left:-25px;
+}
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.ul{
+padding-top:25px;
+margin-left:950px;
+font-size:larger;
+font-type:italics;
+}
+
+.dropdown1 a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.panel-heading
+{
+   height:330px;
+   width:310px;
+}
+.panel-heading p
+{
+   size:50px;
+}
+.checked {
+    color: orange;
+}
+</style>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</head>
+<body class="bg">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="Reunion.html">Home</a></li>
+	  <li><a href="About_Us.html">About Us</a></li>
+      <li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Destinations<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li ><a href="london.html">London</a></li>
+          <li class="active"><a href="#">Paris</a></li>
+          <li><a href="#">New York</a></li>
+        </ul>
+      </li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="dropdown1">
+<button onclick="myFunction()" class="dropbtn1">Search</button>
+  <div id="myDropdown" class="dropdown-content1">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="Reunion.html">Home</a>
+    <a href="About_Us.html">About Us</a>
+    <a href="london.html">London</a>
+    <a href="paris.html">Paris</a>
+    <a href="NewYork.html">New York</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a>
+  </div>
+</div>
+  
+<div class="container-fluid text-center">    
+      <h1>Things To Do</h1>
+<div class="row">
+<div class="col-sm-3">
+<a href="ParisEiffelTower.html">
+<div class="panel panel-default">
+    <div class="panel-heading"><img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Eiffel-Tower-HD-Pictures.jpg" height="250" width="250">
+<p><b>Eiffel Tower</b></p>
+<p style="text-align:left">4.6  
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+97847 reviews
+<br>
+Landmark 324m-high 19th century tower</p>
+</div>
+</div></a>
+</div>
+<div class="col-sm-3">
+<a href="ParisCathedrale.html">
+<div class="panel panel-default">
+    <div class="panel-heading"><img src="https://i.pinimg.com/originals/ed/7b/f2/ed7bf217ca7c7c817a0be1018dfe4403.jpg" height="250" width="250">
+<p><b>Cathedrale Notre-Dame de</b></p>
+<p style="text-align:left">4.7  
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+21120 reviews
+<br>
+Iconic Gothic Church with literary links</p>
+</div>
+</div></a>
+</div>
+<div class="col-sm-3">
+<a href="ParisLouvreMuseum.html">
+<div class="panel panel-default">
+    <div class="panel-heading"><img src="http://wallfocus.com/cache/images/f/b/3/d/0/fb3d0b31d0f1cbdcf8511ff318e0ef6107e62654.png" height="250" width="250">
+<br>
+<p><b>Louvre Museum</b></p>
+<p style="text-align:left">4.7 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+91891 reviews
+<br>
+Landmark art museum with vast collection</p>
+</div>
+</div></a>
+</div>
+<div class="col-sm-3">
+<a href="ParisArcdeTriomphe.html">
+<div class="panel panel-default">
+    <div class="panel-heading"><img src="https://images7.alphacoders.com/359/thumb-1920-359444.jpg" height="250" width="250">
+<br>
+<p><b>Arc de Triomphe</b></p>
+<p style="text-align:left">4.6  
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+57019 reviews
+<br>
+Triumphal arch & national monument</p>
+</div>
+</div></a>
+</div>
+</div>
+</div><br><br><br><br><br>
+<br>
+<br><br><br>
+<br><br><br><br><br><div class="copyright">
+<center>
+
+This website
+is used for making your trips interesting and cheerful
+<p>Copyright 1999-2018</p>
+<p>
+All rights reserved</p>
+</div>
+
+</center>
+
+
+
+</body>
+</html>

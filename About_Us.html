@@ -1,0 +1,273 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+.bg{
+	
+	background-image:url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+button
+{
+position:fixed;
+top:10px;
+margin-left:525px;
+left:700px;
+}
+
+input
+{
+position:fixed;
+top:17px;
+margin-left:275px;
+left:700px;
+}
+
+
+
+
+.dropbtn1 {
+    height:35px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+top:10px;
+margin-left:275px;
+left:1000px;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #3e8e41;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    top:-20px;
+    left:1000px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 260px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    top: 0px;	
+    left:-25px;
+}
+
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.p1{
+padding-top:0px;
+margin-left:1025px;
+font-size:20px;
+color:red;
+font-weight:bold;
+}
+
+.ul{
+padding-top:25px;
+margin-left:950px;
+font-size:larger;
+font-type:italics;
+}
+
+.dropdown1 a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+td{
+color:blue;
+margin-top:50px;
+margin-bottom:50px;
+}
+
+div.relative{
+  position: relative;
+  left: 60%;
+width: 35%;height: 1700px;
+text-align:left;
+font-size: 25px;
+padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid lightgray;
+font-weight: bold;
+opacity:0.7;
+}
+
+
+
+div.static{
+  position: static;
+  margin-left: 5%;
+margin-right: 5%;  
+text-align:center;
+font-size: 30px;
+padding-top: 50px;
+ background-color: rgb(255, 255, 255);
+ border: 2px solid lightgray;
+font-weight: bold;
+opacity:0.5;
+}
+.p{
+	text-align:center;
+font-size: 25px;
+font-color:blue;
+;font-weight:bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+</head>
+<body class="bg">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="Reunion.html">Home</a></li>
+	  <li class="active"><a href="About_Us.html">About Us</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Destinations<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="london.html">London</a></li>
+          <li><a href="paris.html">Paris</a></li>
+          <li><a href="NewYork.html">New York</a></li>
+        </ul>
+      </li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div style="padding-bottom:80px" class="static">
+<p>Our Website makes exploring the world easier by organizing your essential info in one place and making it available even offline.</p>
+<p> Get activity suggestions based on what's nearby, customizeable day plans, and your travel reservations from Gmail</p>
+<p>If you haven't done any planning and need suggestions for where to go on the fly,</p>
+<p>This website can provide some ideas.</p> 
+<p>It is like traveling the entire world and yet sitting at your home.</p>
+<p>For any feedback or queries, you can contact any of the following contacts</p></div>
+        
+     <br><br><br>
+	 <div class="container-fluid">
+	  <div class="row">
+  <div class="column">
+    <img src="ayushi.jpg" alt="Ayushi" style="width:100%; height:500px" class="img-circle">
+	<p class="p" style="color:white">Ayushi Desai</p>
+		<p class="p" style="color:white">Contact:<span class="glyphicon glyphicon-earphone"></span></p>
+		<p class="p" style="color:white">8169781349</p>
+		<p class="p" style="color:white">Email:<span class="glyphicon glyphicon-envelope"></span></p>
+		<p class="p" style="color:white">desaiayu@gmail.com</p>
+  </div>
+  <div class="column">
+    <img src="yashvi.jpg" alt="Yashvi" style="width:100%; height:500px" class="img-circle">
+	<p class="p" style="color:white">Yashvi Desai</p>
+		<p class="p" style="color:white">Contact: <span class="glyphicon glyphicon-earphone"></span></p>
+		<p class="p" style="color:white">7738107772</p>
+		<p class="p" style="color:white">Email:<span class="glyphicon glyphicon-envelope"></span></p>
+		<p class="p" style="color:white">yashvi.desai999@gmail.com</p>
+
+  </div>
+  <div class="column">
+    <img src="aniket.jpg" alt="Aniket" style="width:100%; height:500px" class="img-circle">
+	<p class="p" style="color:white">Aniket Brahmecha</p>
+		<p class="p" style="color:white">Contact: <span class="glyphicon glyphicon-earphone"></span></p>
+		<p class="p" style="color:white">9326103272</p>
+		<p class="p" style="color:white">Email:<span class="glyphicon glyphicon-envelope"></span></p>
+		<p class="p" style="color:white">aniketbrahmecha@gmail.com</p>
+
+
+  </div>
+</div>
+</div>
+
+<div class="dropdown1">
+<button onclick="myFunction()" class="dropbtn1">Search</button>
+  <div id="myDropdown" class="dropdown-content1">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="Reunion.html">Home</a>
+    <a href="About_Us.html">About Us</a>
+    <a href="london.html">London</a>
+    <a href="paris.html">Paris</a>
+    <a href="NewYork.html">New York</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a>
+  </div>
+</div>
+</body>
+</html>
+

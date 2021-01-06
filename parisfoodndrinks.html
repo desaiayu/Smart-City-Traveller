@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Food & Drinks</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+.copyright
+{
+border:2px solid black;
+background-color:grey;
+color:white;
+}
+h1
+{
+color:white;
+}
+    
+.bg{
+	background-image:url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	background-size:cover;
+	color:white;
+}
+
+button
+{
+position:fixed;
+top:10px;
+margin-left:525px;
+left:700px;
+}
+
+input
+{
+position:fixed;
+top:17px;
+margin-left:275px;
+left:700px;
+}
+
+
+
+
+.dropbtn1 {
+    height:35px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+top:10px;
+margin-left:275px;
+left:1000px;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #3e8e41;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    top:-20px;
+    left:1000px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 260px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    top: 0px;	
+    left:-25px;
+}
+
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.ul{
+padding-top:25px;
+margin-left:950px;
+font-size:larger;
+font-type:italics;
+}
+
+.dropdown1 a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.panel-heading
+{
+   height:40px;
+}
+.checked {
+    color: orange;
+}
+.panel-heading
+{
+   height:30px;
+font-size:20px;
+padding:0;
+}
+.panel-body
+{
+   height:230px;
+   font-size:15px;
+}
+</style>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</head>
+<body class="bg">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="Reunion.html">Home</a></li>
+	  <li><a href="About_Us.html">About Us</a></li>
+      <li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Destinations<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="london.html">London</a></li>
+          <li><a href="paris.html">Paris</a></li>
+          <li class="active"><a href="NewYork.html">New York</a></li>
+        </ul>
+      </li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="dropdown1">
+<button onclick="myFunction()" class="dropbtn1">Search</button>
+  <div id="myDropdown" class="dropdown-content1">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="Reunion.html">Home</a>
+    <a href="About_Us.html">About Us</a>
+    <a href="london.html">London</a>
+    <a href="paris.html">Paris</a>
+    <a href="NewYork.html">New York</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a>
+  </div>
+</div>
+  
+<div class="container-fluid text-center">    
+      <h1>Food & Drinks</h1>
+<div class="row">
+<div class="col-sm-3">
+<img src="http://www.disneyholidays.co.uk/disneyland-paris/images/dining/thumbnails/disney-standard-meal-plan.jpg" width="300" height="200">
+</div>
+<div class="col-sm-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNJ5Om4FfffQDQkDQK_w9huNYbZg4a0vo04tfQHmgnlF8DExXM" width="300" height="200">
+</div>
+<div class="col-sm-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm6WE7A33PKGmIkCO6YCgWYKmXC53dab_Qk_mEquXClIiTpKoR" width="300" height="200">
+</div>
+<div class="col-sm-3">
+<img src="data:image/jpeg;base64,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" width="300" height="200">
+</div>
+</div>
+<br><br>
+<div class="row">
+<div class="col-sm-4">
+<div class="panel panel-default" data-toggle="collapse" data-target="#demo1">
+<div class="panel-heading">
+<b>Paris Lifestyle</b>
+<span class="caret"></span>
+</div>
+<div id="demo1" class="collapse">
+<p>NYC is known for its food scene.</p>
+<p>With its thousands of restaurants-and new ones opening every day-NYC's rich dining scene is vast, and the array of cuisines on offer is as diverse as the city's denizens themselves.</p>
+<p>Nightlife-wise, there are bars all over the city, and some neighborhoods are known for clubs or music venues.</p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="panel panel-default" data-toggle="collapse" data-target="#demo2">
+<div class="panel-heading">
+<b>Local Specialities</b>
+<span class="caret"></span>
+</div>
+<div id="demo2" class="collapse">
+<p>Mulbery Street in Little Italy is known for its old-world cafes and trattorias. NoLita (North of Little Italy) also has Italian bakeries, plus international options from tapas restaurants to banh shops.</p>
+<p>For dim sum, noodle houses or Chinese buffets, head to downtown's Chinatown. Or go a bit farther afield to NYC's largest Chinatown, in Flushing, Queens.</p>
+<p>Murray Hill in Midtown is nicknamed as "Curry Hill" for its high density of Indian restaurants. There's also a Koreatown in Midtown.</p>
+<p>The East Village, Lower East Side, Greeenwich Vilage and West Village are home to creative, trendy restaurants.</p>
+<p>Brooklyn is a foodie's playground, where you can choose between smokehouse barbeque, Southern soul food, ramen shops and more. Food trucks and vendors selling everything from donuts to gourmet grilled cheese to noodle bowls gather at Smorgasburg, a sort of weekly food festivl that happens during warm-weather months. Its flagship location is in Williamsburg's East River State Park but has locations around the city.</p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="panel panel-default" data-toggle="collapse" data-target="#demo3">
+<div class="panel-heading">
+<b>Night Life</b>
+<span class="caret"></span>
+</div>
+<div id="demo3" class="collapse">
+<p>The Meatpacking District and neighboring Chelsea are known for their glitzy dance clubs. The East Village and Lower East Side (LES) are home to countless bars, from neighborhood standbys to craft beer specialists and sophisticated cocktail havens. The LES is also known for its indie music clubs.</p>
+<p>In Brooklyn, especially Williamsburg, you'll find indie music venues, dance clubs and plenty of bars-from hipster dives to artisanal cocktail specialists.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12"><hr></div>
+</div>
+<div class="row">
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>Fast Food</b>
+<br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ263FlCC8L_w5JonEr5UL5ek56XEvNBdn9OQGaKjrssVDiIAbHPw" height="150" width="191">
+<img src="https://worldoffoodanddrink.worldtravelguide.net/wp-content/uploads/sites/3/2018/04/shu-Fresh-baguettes-1060030130-JpegPhotographer-430x246.jpg" height="150" width="191">
+Le Jules Verne	&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; Le Comptoir de La Tour
+<br>
+4.1
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp; 
+4.4
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>High-End Dining</b>
+<br>
+
+
+
+
+<img src="https://ugc.zenchef.com/3/5/1/5/9/6/1/5/0/0/4/8/8/1533202227_126/236da9721ab0d0f586a7601c83f3c2d1.clandscape_hd.jpg" height="150" width="191">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNFCXHWJPrjReQQG-hDIkOitXJDmLPDr6WrGbuVCuZlrMaQf8Y" height="150" width="191">
+Jadis Le Petit  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; La Cantine de Belleville
+<br>
+
+
+
+3.3 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.2
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>Classic Cocktails</b>
+<br>
+
+
+
+<img src="https://i.servimg.com/u/f45/15/85/17/97/38003910.jpg" height="150" width="191">
+<img src="https://u.tfstatic.com/restaurant_photos/625/322625/169/612/le-fumoir-salle-6b700.jpg" height="150" width="191">
+Dirty Dick &emsp; &emsp; &emsp; &emsp;Le Fumoir
+<br>
+
+
+
+4.5
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.3
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+
+
+<b>Cafe de I'Industrie</b>
+<br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR70nds0jYIZyluXqhm-WxIdH8kLmznVeo2uM05oTPGwSU5LuCo" height="150" width="191">
+<img src="https://www.parisianist.com/assets/img/articles/cafe-de-l-industrie/en/cafe-de-lindustrie5.jpg" height="150" width="191">
+Le 404 & Restaurant &emsp; &emsp; Honeybelly 5
+<br>
+4.0
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.6
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+
+
+<b>Maison Souquet</b>
+<br>
+<img src="http://janprerovsky.com/wp-content/uploads/2016/08/PREROVSKY-PHOTOGRAPHY1-5711.jpg" height="150" width="191">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXoBvhCXHpGVdkER29hCiYT5xcjDclSZrgyKf4Z-Q6l6MFJ7hM" height="150" width="191">
+Maison Souquet & Company &emsp; &emsp; &emsp; &emsp; Cafe Les Duex
+<br>
+4.5 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.9
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">x
+<div class="panel panel-default">
+<div class="panel-body">
+
+
+
+<b>North African Fare</b>
+<br>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZzoSddmAe79BRZlwgy5MGriBpmcr2l9WpXGImkyA_GOR8veTL" height="150" width="191">
+<img src="https://i1.wp.com/www.couscous-deli.com/wp-content/uploads/2014/07/Salle-et-bar-Couscous-Deli-800x532.jpg?fit=800%2C532" height="150" width="191">
+Le 404 &emsp; &ensp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp;Couscous Deli
+<br>
+
+
+4.2
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.4
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="copyright">
+<center>
+
+This website
+is used for making your trips interesting and cheerful
+<p>Copyright 1999-2018</p>
+<p>
+All rights reserved</p>
+</div>
+
+</center>
+
+</body>
+</html>

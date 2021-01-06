@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Food & Drinks</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+
+.copyright
+{
+border:2px solid black;
+background-color:grey;
+color:white;
+}
+h1{
+color:white;
+}
+    
+.bg{
+	background-image:url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+button
+{
+position:fixed;
+top:10px;
+margin-left:525px;
+left:700px;
+}
+
+input
+{
+position:fixed;
+top:17px;
+margin-left:275px;
+left:700px;
+}
+
+
+
+
+.dropbtn1 {
+    height:35px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+top:10px;
+margin-left:275px;
+left:1000px;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #3e8e41;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    top:-20px;
+    left:1000px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 260px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    top: 0px;	
+    left:-25px;
+}
+
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.ul{
+padding-top:25px;
+margin-left:950px;
+font-size:larger;
+font-type:italics;
+}
+
+.dropdown1 a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.panel-heading
+{
+   height:40px;
+}
+.checked {
+    color: orange;
+}
+.panel-heading
+{
+   height:30px;
+font-size:20px;
+padding:0;
+}
+.panel-body
+{
+   height:230px;
+   font-size:15px;
+}
+</style>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</head>
+<body class="bg">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="Reunion.html">Home</a></li>
+	  <li><a href="About_Us.html">About Us</a></li>
+      <li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Destinations<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="london.html">London</a></li>
+          <li><a href="paris.html">Paris</a></li>
+          <li class="active"><a href="NewYork.html">New York</a></li>
+        </ul>
+      </li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="dropdown1">
+<button onclick="myFunction()" class="dropbtn1">Search</button>
+  <div id="myDropdown" class="dropdown-content1">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="Reunion.html">Home</a>
+    <a href="About_Us.html">About Us</a>
+    <a href="london.html">London</a>
+    <a href="paris.html">Paris</a>
+    <a href="NewYork.html">New York</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a>
+  </div>
+</div>
+  
+<div class="container-fluid text-center">    
+      <h1>Food & Drinks</h1>
+<div class="row">
+<div class="col-sm-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS08sjg6AYWxCD_138aZL5Gj39lG5HJ7eUqTrewaosOU484d1Ccnw" width="300" height="200">
+</div>
+<div class="col-sm-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRFARbgJKI9cgtCxOUwkXV0MjHGS5t6KFmIkvg0t9hUw6bk6kbXA" width="300" height="200">
+</div>
+<div class="col-sm-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgf4EXAtFyHYPdLpS2DWRT3myYVAwI0rce003JsIe_7oBRhULBoA" width="300" height="200">
+</div>
+<div class="col-sm-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWk_m76ojHor1KfyMH9nrZgkTNFGaDXNWW9dZOlKKGVTlNRcbA1g" width="300" height="200">
+</div>
+</div>
+<br><br>
+<div class="row">
+<div class="col-sm-4">
+<div class="panel panel-default" data-toggle="collapse" data-target="#demo1">
+<div class="panel-heading">
+<b>New York Lifestyle</b>
+<span class="caret"></span>
+</div>
+<div id="demo1" class="collapse">
+<p>NYC is known for its food scene.</p>
+<p>With its thousands of restaurants-and new ones opening every day-NYC's rich dining scene is vast, and the array of cuisines on offer is as diverse as the city's denizens themselves.</p>
+<p>Nightlife-wise, there are bars all over the city, and some neighborhoods are known for clubs or music venues.</p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="panel panel-default" data-toggle="collapse" data-target="#demo2">
+<div class="panel-heading">
+<b>Local Specialities</b>
+<span class="caret"></span>
+</div>
+<div id="demo2" class="collapse">
+<p>Mulbery Street in Little Italy is known for its old-world cafes and trattorias. NoLita (North of Little Italy) also has Italian bakeries, plus international options from tapas restaurants to banh shops.</p>
+<p>For dim sum, noodle houses or Chinese buffets, head to downtown's Chinatown. Or go a bit farther afield to NYC's largest Chinatown, in Flushing, Queens.</p>
+<p>Murray Hill in Midtown is nicknamed as "Curry Hill" for its high density of Indian restaurants. There's also a Koreatown in Midtown.</p>
+<p>The East Village, Lower East Side, Greeenwich Vilage and West Village are home to creative, trendy restaurants.</p>
+<p>Brooklyn is a foodie's playground, where you can choose between smokehouse barbeque, Southern soul food, ramen shops and more. Food trucks and vendors selling everything from donuts to gourmet grilled cheese to noodle bowls gather at Smorgasburg, a sort of weekly food festivl that happens during warm-weather months. Its flagship location is in Williamsburg's East River State Park but has locations around the city.</p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="panel panel-default" data-toggle="collapse" data-target="#demo3">
+<div class="panel-heading">
+<b>Night Life</b>
+<span class="caret"></span>
+</div>
+<div id="demo3" class="collapse">
+<p>The Meatpacking District and neighboring Chelsea are known for their glitzy dance clubs. The East Village and Lower East Side (LES) are home to countless bars, from neighborhood standbys to craft beer specialists and sophisticated cocktail havens. The LES is also known for its indie music clubs.</p>
+<p>In Brooklyn, especially Williamsburg, you'll find indie music venues, dance clubs and plenty of bars-from hipster dives to artisanal cocktail specialists.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12"><hr></div>
+</div>
+<div class="row">
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>Family-Friendly</b>
+<br>
+<img src="https://images.vanityfair.it/Storage/Assets/Crops/349148/53/180221/Asia-dog_980x571.jpg" height="150" width="191">
+<img src="https://atimeforteauk.files.wordpress.com/2012/10/afternoon-tea-11.jpg" height="150" width="191">
+Bubby's	&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; Alice's Tea Cup
+<br>
+4.3 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp; 
+4.3
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>High-End Dining</b>
+<br>
+<img src="http://media.guestofaguest.com/t_article_content/wp-content/uploads/2013/09/bidagainsthunger__bluehillstonebarnssoup_v1_87_-_version_2.jpg" height="150" width="191">
+<img src="https://cdn.newsday.com/polopoly_fs/1.12503161.1477435483!/httpImage/image.jpg_gen/derivatives/display_960/image.jpg" height="150" width="191">
+Blue Hill &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; Bouley at Home
+<br>
+4.6 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.6
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>On a Budget</b>
+<br>
+<img src="https://img1.10bestmedia.com/Images/Photos/332463/p-Photo-via-Caracas-Arepa-Bar_54_990x660.jpg" height="150" width="191">
+<img src="https://newyork.seriouseats.com/images/20110810-cocoron-soba-new-york-review11.jpg" height="150" width="191">
+Caracs Arepa Bar &emsp; &emsp; &emsp; &emsp; Cocoron
+<br>
+4.4 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.3
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>Bagels & Appetizing</b>
+<br>
+<img src="https://nybagels.files.wordpress.com/2011/07/img_0293.jpg" height="150" width="191">
+<img src="http://www.italianrestaurantandrecipes.com/images/stories/Barney%20greengrass4.JPG" height="150" width="191">
+Baz Bagel & Restaurant &emsp; &emsp; Barney Greengrass
+<br>
+4.3 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.4
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>Cocktail Lounges</b>
+<br>
+<img src="https://knockoutmag.com/wp-content/uploads/2013/08/ny-bars-banner.jpg" height="150" width="191">
+<img src="http://s3-media3.fl.yelpcdn.com/bphoto/hj9pOWBPc3-MCet1OthR3g/o.jpg" height="150" width="191">
+Death & Company &emsp; &emsp; &emsp; &emsp; Pouring Ribbons
+<br>
+4.3 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.6
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+</div>
+</div>
+</div>
+<div class="col-sm-4 text-left">
+<div class="panel panel-default">
+<div class="panel-body">
+<b>Food with a View</b>
+<br>
+<img src="https://media-cdn.tripadvisor.com/media/photo-s/07/59/8f/63/asiate-at-mandarin-oriental.jpg" height="150" width="191">
+<img src="http://media3.trover.com/T/54ab56c226c48d1bd600db14/fixedw_large_4x.jpg" height="150" width="191">
+Asiate	&emsp; &ensp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &ensp; OneDine
+<br>
+4.3 
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-half checked"></span>
+&emsp; &emsp; &emsp; &emsp; &emsp;
+4.1
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="copyright">
+<center>
+
+This website
+is used for making your trips interesting and cheerful
+<p>Copyright 1999-2018</p>
+<p>
+All rights reserved</p>
+</div>
+
+</center>
+
+
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Arc de Triomphe</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+.copyright
+{
+border:2px solid black;
+background-color:grey;
+color:white;
+}
+a
+{
+color:white;
+}
+.btn
+{
+background-color:black;
+}
+
+.bg{
+	background-image:url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	background-size:cover;
+	color:white;
+}
+
+.button1
+{
+position:fixed;
+top:10px;
+margin-left:525px;
+left:700px;
+}
+
+input
+{
+position:fixed;
+top:17px;
+margin-left:275px;
+left:700px;
+}
+
+
+
+
+.dropbtn1 {
+    height:35px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+top:10px;
+margin-left:275px;
+left:1000px;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #3e8e41;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    top:-20px;
+    left:1000px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 260px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    top: 0px;	
+    left:-25px;
+}
+
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.p{
+margin-left:300px;
+padding-top:40px;
+font-size: 25px;
+font-weight:bold;
+}
+
+.p1{
+padding-top:0px;
+margin-left:1025px;
+font-size:20px;
+color:red;
+font-weight:bold;
+}
+
+.ul{
+padding-top:25px;
+margin-left:950px;
+font-size:larger;
+font-type:italics;
+}
+
+.dropdown1 a:hover {background-color: #ddd;}
+
+.show {display: block;}
+.checked
+{
+   color:orange;
+}
+</style>
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</head>
+<body class="bg">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="Reunion.html">Home</a></li>
+	  <li><a href="About_Us.html">About Us</a></li>
+      <li class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Destinations<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="london.html">London</a></li>
+          <li class="active"><a href="paris.html">Paris</a></li>
+          <li><a href="NewYork.html">New York</a></li>
+        </ul>
+      </li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="dropdown1">
+<button onclick="myFunction()" class="dropbtn1">Search</button>
+  <div id="myDropdown" class="dropdown-content1">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="Reunion.html">Home</a>
+    <a href="About_Us.html">About Us</a>
+    <a href="london.html">London</a>
+    <a href="paris.html">Paris</a>
+    <a href="NewYork.html">New York</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a>
+  </div>
+</div>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-3"> 
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcPgRn3Oz2JwgFtJGb5Su1mq-GmeYM4insNSiU1-wNoXCAbT-8" heigt="250" width="300">  
+    
+</div>
+    <div class="col-sm-6 text-left">
+    <h1>Arc de Triomphe</h1>
+    <p style="text-align:left">4.6
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star-half checked"></span><br>
+   57019 reviews</p>
+
+
+Arc de Triomphe is one of the most famous monuments in Paris, standing at the western end of the Champs-Elysees at the center of Place Charles de Gaulle, formerly named Place de l'Etoile - the 
+
+
+
+
+<div id="demo" class="collapse"><p>
+
+
+etoile or "star" of the juncture formed by its twelve radiating avenues.</p>
+<p>The Arc de Triomphe should not be confused with a smaller arch, the Arc de Triomphe du Carrousel, which stands west of the Louvre. The Arc de Triomphe honours those who fought and died for France in the French Revolutionary and Napoleonic Wars, with the names of all French victories and generals inscribed on its inner and outer surfaces. Beneath its vault lies the Tomb of the Unknown Soldier from World War I.</p>
+
+<p>As the central cohesive element of the Axe historique (historic axis, a sequence of monuments and grand thoroughfares on a route running from the courtyard of the Louvre to the Grande Arche de la Defense), the Arc de Triomphe was designed by Jean Chalgrin in 1806, and its iconographic program pits heroically nude French youths against bearded Germanic warriors in chain mail. It set the tone for public monuments with triumphant patriotic messages.</p>
+
+<p>Inspired by the Arch of Titus in Rome, Italy, the Arc de Triomphe has an overall height of 50 metres, width of 45m, and depth of 22m, while its large vault is 29.19m high and 14.62m wide.</p>
+</div>
+<br>
+<button type="button" class="btn btn-xs collapsed" data-toggle="collapse" data-target="#demo">Read More/Less</button>
+    
+</div>
+   <div class="row">
+<div class="col-sm-9 text-left">
+<hr></div>
+<div class="col-sm-6">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.1827993377437!2d2.2928388156749255!3d48.87379167928894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fec70fb1d8f%3A0xd9b5676e112e643d!2sArc+de+Triomphe!5e0!3m2!1sen!2sin!4v1540787141295" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+
+	
+</div>
+<div class="col-lg-3 text-left">
+<span class="glyphicon glyphicon-map-marker"></span>
+<a href="https://goo.gl/maps/PTxENWhmgJk">Place Charles de Gaulie,France </a>	
+<br><br>	
+<span class="glyphicon glyphicon-earphone"></span>+33 1 55 37 73 77
+<br><br>
+<span class="glyphicon glyphicon-globe"></span>
+
+
+
+<a href="https://goo.gl/maps/PTxENWhmgJk">Website</a>
+
+</div>
+     </div>
+</div>
+
+
+<div class="copyright">
+<center>
+
+This website
+is used for making your trips interesting and cheerful
+<p>Copyright 1999-2018</p>
+<p>
+All rights reserved</p>
+</div>
+
+</center>
+
+
+</body>
+</html>

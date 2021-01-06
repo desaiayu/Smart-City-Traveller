@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Paris</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+<script type="text/javascript" src="lond.js"></script>
+
+<style>
+
+.copyright
+{
+border:2px solid black;
+background-color:grey;
+color:white;
+}
+
+
+.bg{
+	
+	background-image:url("http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-attachment:fixed;
+	background-size:cover;
+}
+
+button
+{
+position:fixed;
+top:10px;
+margin-left:525px;
+left:700px;
+}
+
+input
+{
+position:fixed;
+top:17px;
+margin-left:275px;
+left:700px;
+}
+
+
+
+
+.dropbtn1 {
+    height:35px;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position:fixed;
+top:10px;
+margin-left:275px;
+left:1000px;
+}
+
+.dropbtn1:hover, .dropbtn1:focus {
+    background-color: #3e8e41;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown1 {
+    position: relative;
+    display: inline-block;
+    top:-20px;
+    left:1000px;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 260px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    top: 0px;	
+    left:-25px;
+}
+
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.p{
+margin-left:300px;
+padding-top:40px;
+font-size: 25px;
+font-weight:bold;
+}
+
+.p1{
+padding-top:0px;
+margin-left:1025px;
+font-size:20px;
+color:red;
+font-weight:bold;
+}
+
+.ul{
+padding-top:25px;
+margin-left:950px;
+font-size:larger;
+font-type:italics;
+}
+
+.dropdown1 a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+div.relative
+{
+position:relative;
+
+width:0px;
+height:0px;
+right:0px;
+bottom:50px;
+left:10px;
+top:10px;
+}
+
+
+div.absolute
+
+{
+ 	position:absolute;
+ 	
+	background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATUAAACjCAMAAADciXncAAABF1BMVEX////WJxUdHRsAAAAbGxkUFBHTAADWJRLVGgDVIArlgHj/+vkZGRcNDQrdV03d3d12dnVWVlWKioqcnJwICAGAgH+UGBQjIyDZMyH98e9HR0bp6ekvLy2/GhgREQ6pqamPAAC8AADnjYbzzMtmZmb09PTj4+PcUUaaKCT05+frn5lubm3xv7tKSknZPC42NjT43tztraj10c7ic2rwubTNzc2dnZxgYF/haV/plpC7u7rbRzvn0tLtqqXExMO+DwzfmZnau7qpWljbjYzGODfBiYjha2KdMi+aJiLCJSTlrq7mzc24cW+mS0jMnJquGBWpAADYsbC+gH6kQ0DIlJPDKinRZGOsExHJTEvTbW2zMS/dkJDXf37N5cP4AAAVA0lEQVR4nO2ce3vaOLPADcbY5poQkkBISQIhWQgBh5AWQpM0bTe9bXffbrt9e87Z7/85jmTZxuAZXQwp9Hkyf7QBLHn0szQzGknWtCd5kid5kid5kid5kid5kid5kid5koi0aidUarVWrJLqxX5xaZ1cl842+7sGld3++Vnp+kSaQe3g7JyUrO+fb1xzC21tl/iyfeVf+pxeun0tuDO76mBWG1ZTbebL240T2dZsSd2ZILvaPtf1ct7IpZjkjHpZ1/sb1zVhWU072d7V8wYrltf3S5wyfb3MFz0AcE4v1bcF92ZXnc18V2Q1FWe+3NL7sp1gz62zJLjqpNQnrU5GJZfXkxu3opsdJPVcuJCePECv3YNuE5YptU16aV5EjV21MfNdMZWiNc1TK7+QxOYqWeZTO9kuz7R6VlJ5fY/fV88ipXP6GabfKqklhR03rCSXWqukl1OznFKp2S8Mvc/h9kKH2n6OYFsptaS+JagtpCSP2u1uqNEpYpV0I0ekrJeNUA8y9M0iUsGZPi2cr+d83uU9GNte3giJXzIkj0otpYtNvCamtj0dXWQoJs+3r6+KVK6uS5u75fIUXB0xjtcetJy+e362cdY3dI9beRO8/sVeWNiN98NfTbv1I1AjhvpKEwufWm0v6Gg5PRcx+1elfT0fDFZ9D3KNHqT8/gErfLJl5L3rN4DL52TXbd1z+MfHoJY0diXiDy61YqoeMPNbPSdXZ1OrZ+i3kd8PGHb9eFq6dew9CoxGSBg1xNg8CrVkXSL+4FErJn3LrO/jw71W0vP+GI62b9cdw/kXM1+WfGxRyvPFfz61ZHlWWUg41Iopw+9DfM9Sm4YW86PuxNUklZx7fB62udgTkFVQk4g/cGq1fQ+a3heO9Kv94I6zEQUboNFmb+h01Ivd/EqoieMPnNqmgtGmvta7+njm61LZ/TLqJjbzdUM4PldFTRh/oNRK8ibblWt3lM6PuWPqTlK7UfvaqoMed15WQy2ZKmPRJxOM2q0iNKLJbj1qqM5p9bk96HKpSldELZmbt8SzglBreRMbyRmGK7V+dDAzavuxk2o/n5rnAut9Xp0INY+77GyWSSvaug3XOOq/DrVU34sm8/DUhQlMrbbvhhIGNLSUhNGXm9xB8tOp5fonL8qsx3Am5zA15gpSdTnjwxE2C80L4zJMfj61/Vprj82IdEEScJ6a19WEyUqxtLyRHhf/KqhpJ2xCw5m6gNRYbJqTTgjzdHafm4Fl00SyEmraVd2dWucM7GGD1FzPx+uh8nIVx61MZTXU/PSWgTl/iFrRRb1AvBC5gVoIE5IVUfNjiPwmkjoFqLEigsUEWSn64XKs6lZFzZ0oJ9HpJETNvU9SMKmQlmBqdiwzhZqTlVHzp+HwvQFqNVdV41ygjbRssvgnWe6rP4fVUWt5KR/QugPUmAEXaiMvPjYjp+xfpKi1eBKXmlZjiyIpaCEBoOblxCTyOLLir+3l9G1FDyOmNrsUA8huMh410ntY/AEsJADUtumITqGxShzZ8Bem9D3pvRSuiKklUzm+JONS89c8gIUEgNqLuhvixrDduGz5OfK62pxUgpqUxKLmO7LoQgJAzY1xY0fziFzX/RVhpYB3tdT8FfCIygC1Pu0WdfFCjZoU9/2VLHSzAiArpqb5E/k5DX4aNa216edK8/vSo1+CmqHzJbcItdauF3/M2pWfR42q5fkEQzoHIqZmbB7wxW1OXGraSZ7FH/pM/BGfWm0blRIyBG91b0zldJndFNoqo1xf/PgjF/4eo2YgW35Cd9bLeVh0dASe9D3jlpLEtnpqYPwBUHNvI448iv4ekIhw/G/rXFfCtgbUoPgDoHbm4siLTA+HGpJfYbX78wRDJt5dB2pB/mN6J4DaltyMCqdWP+aV83MgdaEN0NaEWiuS/wCosQXkskibop6vzwsz9nn+HocgdSSRcVsLalqtz+ZuQfwBUCvmpDJFJ8dR2XTdtCifGewJEZu29aCmFXe9+MMrAWUl+zkpwwbIrdzy5zFLHUnEhGtCTbtlW0L9jQwQNeYO4mTAPZMotPN9L+Jev11/CLUg/mDr6hA1tkITZ7Vlz+DcOKw1Cx3Fq8trQy3YqOh6Ooiav4isnHlla8Z8FxrSMJnKifiuD7Ug/qCswPVQtqdFfRUZ2xkZlVYyJWUB14haEH8cINT8pV/VNUxv9VkmfGWbKIVNXiNq/vpLilhjeHeMm84lA0gtXc1gG7wtTHPXCr3oOlEjcX2OOdLaOUjN62x1KQCBqGx0OPGCQoERWCtq/gZS47yfAoOM4/zU9MnKNWThMSrMsP1i1Pz4gx0Gi1IreqfyFNZGWjlg+9ZBMotc/UtSC6Y1MDXtOfs5Jb8sylxMqh66a3FTx3orm/sbv5Rdo/Iiz6Pm/yybPvSfQqiFrZJeRzf8eZsoRWcZ1o6aP61BqNW8DYOSJya90NkIbZ1mHJG9vZtynmP9qLWSOQ41P2Eu5xKCNEZIkRrbcQiuf3r7s4Sh3fpR04r+oVh4ou6fhxVvM6j5i3azZzr8U45AZ2V7AcWh3RpSI1xSHGp+q+lKXAlxhayaspfWnT/a4u+TjHiUbZznrKwjNd9TYkmhAFtS17ewGIE4Sv9M9nwis+Y74jk6HjSJ4wxrSc3TH02l3QYHP1O6fgYFIdd7/hpnUo9mf33sMxs1T/xj4b9OLnde3K1leAKyuF/2u1syrxtn1+EbFa+P9YAZfETW9xLl/HNPm6szv8ivs24QkdZenpu2bYVfYZLK63p+f/N4u1R6sblPPtT9I+/E9MGH+/wNf6Sv9s9KG+dGcNxbl0jDrSs198gxN9l9m9QDNrT5OaOeL5frRi70bUpH99xO34GSq5fzRlBICtraUtOuUjn+EkFrK8d54Y7LzOBk4rahwinxkXdX1pYaiT9EFqa1FX5vx5wYepL3jitSf0qfL5uXza6zzVSIenvuj6JJGbtq7p1YrN55alTysrvEnktsX7zdINFHfa7XuC/g2YRf9BGSWsmYOg3yOMv6mWy6s+YKcoMW70f+VazeONWF6pC5tHVVerFPn0aZ7iUql8lf9b3tAznj+XyTFiTFyH/9klqK+JeXVu3qYKtU2tjYKJUOrostheWY2u3z0jYppvB+wCdZiVTbzmA47IxvhsOB066uWh2OVB2nSTW9GA6dWJpmVQWupt1sjCaJNBHLsuh/5mTUGLZ58+kYKsWpbb7y9pBoak41tRJE066apoNJQU0mzWglTmdkpy3bNBNTMW3bSlunjYF6U8en2M1Hl5eZzLjTJf0j3vNwxgWilW3Pakro2YWxgqbNtK0m6Xlq1eHIsmbUmFEoPRk7im3LWOjdLVdIB6kULscDxaFVvSmkeZqedtqSNTXTYCW4zFGrdnppm1uAtPRyoNS6jCVWw+0g5qjjSHeQdiMh1NTOyD3hxahlO5U0/OxmWmilH1T6mww1VjHpIIULqR5XHVuWjKZWRqa/LUSt25Ng5oplNeSHkzQ1KnY6MRZXfVGRYEaFcOuIu+8C1KqXgh4/q02v+yjUaNW2oKHOSPbp0urSE6FBiU+taSk2Lt2QtEGK1GjVFcCzB3KhqKmdHj8WtbHC4/OLnsr5KGVqlFsGr05ZUzNd4D/guNRGquWoWAkpZxqDGqm7BzucaiFebdwHHJPaaRxVqG+XMW6xqCF1V3txNeV5/XjUYkKjfX/4WNRI3RdRaJX4mnKwxaGWjQ2NKiPubTGpEd1u5qEl5L18VFMcWxxqo/jQqDJC2xabWmKuJ2cnC2lqobYtBrVxHEcgpczC1MzZ+d5Cj5fYth7mSZWpWfHbFCjzaNQSZiX0SBZ8vKStD8uitoClCJTBY6tFqSWsaaTlLAqNDKzOsqgtQSLZpuVRCzW0t/jzNZH4Y+nUTNNEUlihaxLc0HshakFDhePTpCK4xi48PjXbSqft3oTml7HsHxOr8WjUEtbIrcThzqOoponJKc3ZW9wuGQlmPGpWWMA7hX7n1G9a6dPGsFrNZrPVdnNME7wcZXh+FKJmsvvbtrB7JFhE+IDrSuoadZrOoDkYDByiaZqTRTIrUBrKyTRCMk4A5a3p75e4KpaVmU28t8ec7BvXIQDUzB65eyZzWSj0aEfm9mT7lOgxQMeQaVXGg+ar728/3N3dfXj7/dXAGXOybxbiEMJSAUqnpz83MGp2GsiBVm/w+QxvvgJQ8+0L7cft5k2mwOvJdEKKdjXLGjsffxwd3d09o3J3d3T0o1vt2Nj1cGdTodaGfnZVQRJ51Uusu/E6G0ht1n9knc4pyo0gRqOOdMHpvj0ixAgtV9w/fzTbD1h3w6IPaWodWBfTukSfxxBpm2nhj1CCGgXXnSANJW4UGRQ0M/ovAXV39Oz7m48vHefjvz+eHVFu/2ZvkNrsiTCZyqWWPQUJmBYv9TmwYWxAgkKNGtGngTTUuuyBP5jpi+pbAuno7aupPWm/+od+9aPaRWoTRJciaoiF5YcR2gD2evZoYWq0JyP9A6F5U/2HdLS7V7P9vPqGdL+jtxg20VRGQA3u9uhkzRdEGTz4kKeGYoOhZbS3BNo/IUdUZfyazwi2H9oF2ECzJ/IHPGrwALWFdWpjUBl8iCpQw0wtJPZE+5+jZ3dvQ/q+Ojp64/7RJjiP/kXia+EQ5VFzwOcqkWXUJhBuvOOrUJPPBhEf0SXQPoSgfaQGjSFpfyDYmlVw7iowQXxqQ+ixWrh5mkoXapmJZq+UqPFnTmFNM9oHAik0PAdHNGD7zj40aTfUbiBNkcmoHDVwYiDOzFIBx3YaG9pK1GRnrabdvjl6dvRqWpB6Birexzfk149ZaFgIDRuPWgGokNOasAxB4NjYVqMmmUYjg+L9fwNEVL4fudC8Iapl/3l290PrQJpy16v41KpQDCQzS6NloXrRsmrU4I4cbUX35eHO4cdpsTcMGnUCTF6Rzua0wecrcAccag4UBPGmk2GB+ilqZBWpwS56Tsh08ndCbVqL6wncIXrnfeOQL/4PfAaivsGhBsW44lCG0zLUiSpS68oMUWLRPx8efg4KOXe0l32n2I580/zjjrgGyEyKnCiHGpS/FEa4vkCF0dmBIrWqDDXyiEhX+9Mv0/pfEmi8YaM08BBkhvo2Cxk26zI2NShwFk82PBkAhZdFLSszP7DGLULt3i/zmnz4wzVlRD54X9Jwrg313GVTE8V/PGomlkxQpKZNZKgNqTN46ZWgJu41+f/T4c5ff/115M3tPhF3AFLjzJkflZoDVLw0ajJOdIbaF/LnO2qR24c7RPyB+/I/f/2nDZlvUZj7eH1tLah9YnQIKwawuuNS+8rqIT3vsK1kgR+dmoIuj0LtJrBrrfeBhct+Zp2NRQL3lNrPsGuy3uAxfaicXWto/lD8GnKmfzBqX9wPfx/uvGst2YeCDZebUGngRGVZ8ZqcD33w4zUC6vBvv+zvjNpr9wO54DWYRFwgXgPdoCkZ5UL5nGXNDaTiNXviOs6q9o38+zmo7M9DZtnoF23y/zd4FhN/bgDPqIQ5ddYwpTnsY8wNTNuhxv53t3NNs8j3jNrO19ev/6Ax3Ms22EpBDlF59i5n2JqPmPPAF2lnNe1o70hnou7z07TsS48a+eGQdkLtAkwixs95gH1XZo1VQxKu6MKBGrUsvB4VqWHiDcfptIpIy6e243kFsJH8DeF8auAzlUoVgYN7Sblc6f091lB7T8i8D0MjUcj731x5x+I2cFAslMsF7cfM5kRMwO0DuDtXowb1DkjsnmvF3s9W1GZS/USp3cOVLbRu0Ia2zghjGQ1ZNiBx51KogasZoJDG06jjK/SY2+/ceATM5C62RoU8VeE+iCq8jLyU9VB860lUTKurUTjvXkZq+bTjTucdUNPF1kORJ2Fa/IMXyOkE+xQtoUCtqnL0wbQG2R3qRL/NbbX5m375tQWv60mMJi410KjTUIjXg7PIgiU+QBWoYYekkK2Bpulk31FCO3+G9nl8c0l+zmJPQLziy99ThACAjuIE7UIOSpjoup4CtSZySMo+RVwEPSLiTj3J5Orbl/v7+y+/fz10P/+tOUhlEll+PjUsCsfPGTaxTWYL7l+j4qCneq0uGKy6mna0+98OvbDWFfr3b5+0C1RT0WFRETVkKxatugetJrfRTX/qeyXnqDkXhTS6vbGXxWf06VNH+/KO0fImBb/da04B09S0xaGVYIcp7ubtdGHeujkZtF38jQ4QtVOHRFVOczAYDm8aDxOLt3WbRt6w52KaXjrayz8/e13t85eX2uABP4suM2cUUOOFlHbaHnd9E1Btjis4M8E6KrS4ZqcDsfibmUlUSXpHlrNX3EpXOnRotNotcmFzbHE0NW2JKaOIGnf6YtIX2CQKhUKFvqeEe96A+wAXPKnFAkjMsgWaWr3CqFBJCzSV2JUrpgZvkZlRyBafCTCtxzvbEmyoE+XFTVdTUWXiTbky1MAdG6oiiIAWo+afEV3C4TPZLVNCanI5QL6IVuwXojaN5G+WcGZPHHXIUVv81CV+WHUJ1OxQwm/BQ7X02KQUNBlqWqxXPUyFewx/UWqmFYp/sguedbTlUq5y1BY8TS5ealiA2uwRuzZy1kFSU1HiW4ma1o75jgxXFYlXUyzwtoC5/CF2REROU7mVJFlqWjv+WzIsfKK/OLXodHhgxsWmAE2SWmxsUtBiU0tnom5mEPOcvgo0WWpoAogvti3x5pi41Mz54ckESwDxRfKNSorUtOyD+jux4MTIkqjZWJqzPVI5NeRpOlF6F6Y0NZpVUOv7pjWSfNllrDeJneLtbChrCgz1JVHTBqdKR79MuU32caiZljXmtbPbU9K0ImN8w6JCTcuOTVltbGsk3+eV35BoXQoqr2akX/dnCyuLihI1moSWeTMo0aQn5QY8UaFm2lZFppmDAj8pF2h6Kv36y6koUiPajGwBN9Ku3oWSnZClRt+ZmyhcSFrLbkH0hEmnjcOMULPNiHCpkf7WqODq0IaddhXfPp2xokrMCn1Jc9qqTDJd2bcpUxlkEniHI5rao1jMYvQ1KtnuQ8KyIrlIkzw7e9JRthLCvlapTAqZTlf1hdYafft2wYxqatJna09uVJ7AbLWQyBQc3BToO2aCN9HQN5X0Ml11ZESyoBZq+uCVN8cFM/y6HKrppKHUaZcqzqA7bDQuR6NGozPsyr+h++eL0+xeUE0fqKbNWI/2SZ7kceX/AYPvfrTkuQiDAAAAAElFTkSuQmCC");
+	background-repeat:no-repeat;
+	background-position:center;
+        width: 400px;
+
+        height: 250px;
+
+        border: 7px solid #f08080;
+ 
+        left:60px;
+
+        right:100px;
+
+        bottom:50px;
+ 
+	top:0px;
+}
+
+
+div.absolute1
+{
+
+position:absolute;
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSICNtQJKqzY63EBlLDHNZgmVhHSWwSngQcX-HHn3c4IXWNnm4PYw");
+background-repeat:no-repeat;
+background-position:center;
+
+ width: 400px;
+
+ height: 250px;
+
+ border: 7px solid #f08080;
+ 
+ left:480px;
+
+ right:100px;
+
+ bottom:50px;
+ 
+top:0px;
+
+}
+
+div.absolute2
+{
+
+position:absolute;
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVdR9r0--fP0hvsQzY5wgCc2MDQonWfbxLChUARY7vKcXz-4g	");
+background-repeat:no-repeat;
+background-position:center;
+
+ width: 400px;
+
+ height: 250px;
+
+ border: 7px solid #f08080;
+ 
+ left:900px;
+
+ right:100px;
+
+ bottom:50px;
+ 
+top:0px;
+
+}
+
+    .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        display: block;
+        height: 870px;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        line-height: 1;
+    }
+
+
+
+.vertical-menu {
+    width: 200px;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    width:350px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+   background-color: #cc2f10;
+    color: white;
+}
+
+.vertical-menu a.passive
+{
+
+background-color:#c3cae0;
+
+}
+
+
+</style>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="Reunion.html">Home</a></li>
+	  <li><a href="About_Us.html">About Us</a></li>
+      <li  class="active" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Destinations<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="london.html">London</a></li>
+          <li class="active"><a href="paris.html">Paris</a></li>
+          <li><a href="NewYork.html">New York</a></li>
+        </ul>
+      </li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="dropdown1">
+<button onclick="myFunction()" class="dropbtn1">Search</button>
+  <div id="myDropdown" class="dropdown-content1">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="Reunion.html">Home</a>
+    <a href="About_Us.html">About Us</a>
+    <a href="london.html">London</a>
+    <a href="paris.html">Paris</a>
+    <a href="NewYork.html">New York</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdULju6Ood1zRX1hESMwvrCTpbJMdkKR2QA6utvWFnMBax3vA/viewform?usp=sf_link">Feedback</a>
+  </div>
+</div>
+<center><h1>Paris</h1></center>
+	<div id="myCarousel" class="carousel slide">
+  
+	  <ol class="carousel-indicators">
+    
+	    <li data-target="#myCarousel" data-slide-to="0" class="" contenteditable="false"></li>
+
+            <li data-target="#myCarousel" data-slide-to="1" class="active" contenteditable="false"></li>
+    
+        <li data-target="#myCarousel" data-slide-to="2" class="" contenteditable="false"></li>
+
+         </ol>
+
+    <div class="carousel-inner">
+
+         <div class="item" style="">
+
+             <img src="https://wallpapershome.com/images/wallpapers/louvre-museum-2560x1440-france-paris-tourism-travel-4712.jpg" >
+
+
+             <div class="carousel-caption">
+ 
+               <h4 class="">Louvre Museum</h4>
+
+               
+  
+            </div>
+ 
+       </div>
+
+
+        <div class="item active">
+
+            <img src="https://www.setaswall.com/wp-content/uploads/2017/03/Hd-Eiffel-Tower-Night-Wallpaper-1920x1080.jpg" >
+
+            <div class="carousel-caption">
+
+                <h4 class="">Eiffel Tower</h4>
+
+            </div>
+ 
+       </div>
+  
+      <div class="item" style="">
+
+            <img src="https://images7.alphacoders.com/359/thumb-1920-359444.jpg" >
+
+            <div class="carousel-caption">
+
+                <h4 class="">Arc de Triomphe</h4>
+
+ 
+
+
+            </div>
+ 
+       </div>
+
+    </div> 
+   
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+ 
+       <span class="glyphicon glyphicon-chevron-left"></span>
+ </a>
+
+
+
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+ 
+       <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+
+
+
+</div>
+
+<br><br><br><br><br>
+<br>
+
+<div class="relative">
+<a href="ParisThingstoDo.html">
+<div class="absolute">
+</div></a>
+<a href="#">
+<div class="absolute1">
+</div></a>
+<a href="parisfoodndrinks.html">
+<div class="absolute2">
+</div></a>
+
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br><br>
+<div class="copyright">
+<center>
+
+This website
+is used for making your trips interesting and cheerful
+<p>Copyright 1999-2018</p>
+<p>
+All rights reserved</p>
+</div>
+
+
+</div>
+</body>
+</html>
